@@ -2,15 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Untitled Document</title>
+	<title>Caroussel | Milton Martinez</title>
 	<link href="CSS/style.css" rel="stylesheet" type="text/css"> 
 </head>
 
 <body>
 	<div id="slider">
-		<img src="http://jeitests.com/namecouple/image/milton-m-2.jpg" id ="imagenIzquierda" class="imagenes";>
-		<img src="http://jeitests.com/namecouple/image/milton-m-1.jpg" id="imagen" class="imagenes";>
-		<img src="http://jeitests.com/namecouple/image/milton-m-15.jpg" id ="imagenDerecha" class="imagenes";>
+		<img onClick="caroussel(1)" src="http://jeitests.com/namecouple/image/milton-m-2.jpg" id ="imagenIzquierda" class="imagenes";>
+		<img src="http://jeitests.com/namecouple/image/milton-m-1.jpg"  id="imagen" class="imagenes";>
+		<img onClick="caroussel(-1)" src="http://jeitests.com/namecouple/image/milton-m-15.jpg" id ="imagenDerecha" class="imagenes";>
+
 		<div class="left_hold">
 			<img onClick="caroussel(-1)" class="left" src="Images/arrow_left.png">
 		</div>
@@ -18,7 +19,6 @@
 		<div class="right_hold">
 			<img onClick="caroussel(1)" class="right" src="Images/arrow_right.png">
 		</div>
-
 	</div>
 </body>
 <script src="js/jquery-3.3.1.min.js"></script>
