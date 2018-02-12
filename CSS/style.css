@@ -58,12 +58,6 @@ html{
 	opacity:0.6;
 	transition: all .2s ease-in-out 0s;
 	}
-
-.imagenCentral{
-	height:400px;
-	width:650px;
-	margin-top: 50%;
-}
 .right {
 	height:70px;
 	width:70px;
