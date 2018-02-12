@@ -2,10 +2,10 @@ let contadorImagen = 1;
 let total = 15;
 let contadorImagenDerecha = 0;
 let contadorImagenIzquierda = 0;
-function photo(x) {
-	let imagen = document.getElementById('imagen');
-	let imagenIzquierda = document.getElementById('imagenIzquierda');
-	let imagenDerecha = document.getElementById('imagenDerecha');
+function caroussel(x) {
+	let imagen = $('#imagen');
+	let imagenIzquierda = $('#imagenIzquierda');
+	let imagenDerecha = $('#imagenDerecha');
 	contadorImagen = contadorImagen + x;
 	contadorImagenDerecha = contadorImagen-x;
 	contadorImagenIzquierda = contadorImagenIzquierda+x;
@@ -22,9 +22,12 @@ function photo(x) {
 			contadorImagenIzquierda = contadorImagen+1;
 			contadorImagenDerecha = contadorImagen-1;
 	}
-			imagenDerecha.src = "http://jeitests.com/namecouple/image/milton-m-"+ contadorImagenDerecha +".jpg";
-			imagenIzquierda.src = "http://jeitests.com/namecouple/image/milton-m-"+ contadorImagenIzquierda +".jpg";
-			imagen.src = "http://jeitests.com/namecouple/image/milton-m-"+ contadorImagen +".jpg";
+			$(".imagenes").fadeTo(500, 0, function(){
+				imagenDerecha.attr("src","http://jeitests.com/namecouple/image/milton-m-"+ contadorImagenDerecha +".jpg");
+				imagenIzquierda.attr("src","http://jeitests.com/namecouple/image/milton-m-"+ contadorImagenIzquierda +".jpg");
+				imagen.attr("src","http://jeitests.com/namecouple/image/milton-m-"+ contadorImagen +".jpg");
+				$(".imagenes").fadeTo(500, 1);
+			});
 }
 
 
