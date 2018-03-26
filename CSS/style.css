@@ -70,6 +70,14 @@ html{
 .left_hold:hover .left {
 	opacity:1;
 	}
+.footerSocial{
+	width:100%;
+  	position:fixed;
+  	bottom: 0px;
+  	left: 0px;
+  	background-color:rgba(0,0,0,0.9);
+  	text-align: center;
+}
 .right_hold:hover .right {
 	opacity:1;
 }
